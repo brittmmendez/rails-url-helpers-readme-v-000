@@ -47,3 +47,15 @@ Processing by PostsController#index as HTML
   [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
   Rendered posts/index.html.erb within layouts/application (2.7ms)
 Completed 200 OK in 447ms (Views: 434.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/index" for 69.133.193.210 at 2018-02-06 22:51:26 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 15ms (ActiveRecord: 1.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=index):
+  app/controllers/posts_controller.rb:7:in `show'
+
+
